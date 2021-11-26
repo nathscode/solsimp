@@ -1,0 +1,71 @@
+.roadmap {
+    position: relative;
+    &__image {
+        position: absolute;
+        top: -210px;
+        height: 400px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        img {
+            width: 100%;
+        }
+    }
+    &__title {
+        width: 100%;
+        @include flex;
+        @include flex-column;
+        @include justify-content-center;
+        @include align-center;
+        padding-bottom: 4rem;
+        h2 {
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 42px;
+            color: $primary-color;
+            margin-bottom: 1rem;
+        }
+        p {
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 25px;
+        }
+    }
+    &__list {
+        width: 100%;
+    }
+    &__content {
+        margin-bottom: 4rem;
+        @include flex-wrap;
+        @include align-start;
+        @include justify-content-center;
+        &__icon {
+            margin-right: 1.5rem;
+            img {
+                @include image;
+                height: 100%;
+                width: 100%;
+                border-radius: 10px;
+                height: 60px;
+                width: 60px;
+                z-index: 1;
+                transition: all 0.3s ease-in-out;
+                transform: translateZ(0);
+            }
+        }
+        &__text {
+            max-width: 15rem;
+            h3 {
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 22px;
+                color: $primary-color;
+                margin-bottom: 1rem;
+            }
+            p {
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 25px;
+            }
+        }
+    }
+}

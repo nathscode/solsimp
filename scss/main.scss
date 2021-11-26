@@ -1,0 +1,110 @@
+@import "import";
+html,
+body {
+    font-family: $font-family;
+    font-size: font(fs-16);
+    line-height: lead(leading-3);
+    font-weight: weight(regular);
+    background-color: $dark-color;
+    color: $white-color;
+     ::selection {
+        background-color: $primary-color;
+        color: $white-color;
+    }
+    @media (max-width: $screen-md-max) {
+        font-size: font(fs-16);
+        line-height: font(fs-15) * 1.5;
+        p {
+            font-size: font(fs-15);
+        }
+    }
+    a {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.theme {
+    height: 100vh;
+    width: 100%;
+}
+
+.base {
+    &:after {
+        content: "";
+        position: fixed;
+        width: 100%;
+        overflow-y: auto;
+        min-height: 100vh;
+    }
+}
+
+.svg-inline {
+    display: inline-block;
+    font-size: font(fs-18);
+    height: 1em;
+    overflow: visible;
+    vertical-align: -0.125em;
+}
+
+.svg-inline.show {
+    color: #ffd475;
+    fill: #ffd475;
+}
+
+.show {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+.hide {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.d-flex {
+    @include flex;
+    @include flex-row;
+    @include flex-between;
+    @include align-center;
+}
+
+.content-wrapper {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.main-section {
+    min-height: calc(100vh - 56px);
+}
+
+@media (min-width: $screen-xs-max) {
+    .content-wrapper {
+        max-width: 992px;
+    }
+}
+
+@media (min-width: $screen-sm-max) {
+    .content-wrapper {
+        max-width: 992px;
+    }
+}
+
+@media (min-width: $screen-md-max) {
+    .content-wrapper {
+        max-width: 992px;
+    }
+}
+
+@media (min-width: $screen-lg-max) {}

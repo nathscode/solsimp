@@ -1,0 +1,113 @@
+/* LAYOUT */
+.row {
+  width: 100%;
+  @include flex;
+  @include flex-wrap;
+  @include flex-between;
+  @include justify-content-start;
+  .row-align-center {
+    @include flex-row;
+    @include align-center;
+  }
+}
+.column {
+  position: relative;
+  max-width: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  min-height: 1px;
+  padding-right: ($spacer--small / 2);
+  padding-left: ($spacer--small / 2);
+}
+.space-right {
+  padding-right: 0;
+}
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    text-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+  }
+}
+.display-mobile {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+.display-desktop {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+@media screen and (max-width: $screen-xs-max) {
+  .column {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+@media screen and (min-width: $screen-sm-max) {
+  .display-desktop {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+  }
+  .display-mobile {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .space-right {
+    padding-right: 5rem !important;
+  }
+  .column.split-5 {
+    -ms-flex: 0 0 41.666667%;
+    -webkit-box-flex: 0;
+    flex: 0 0 41.666667%;
+    max-width: 41.666667%;
+  }
+  .column.split-7 {
+    -ms-flex: 0 0 58.3333%;
+    -webkit-box-flex: 0;
+    flex: 0 0 58.3333%;
+    max-width: 58.3333%;
+  }
+  .column.split-4 {
+    -ms-flex: 0 0 33.333333%;
+    -webkit-box-flex: 0;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+  .column.split-8 {
+    -ms-flex: 0 0 66.666667%;
+    -webkit-box-flex: 0;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667;
+  }
+  .column.two {
+    -ms-flex: 0 0 50%;
+    -webkit-box-flex: 0;
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  .column.three {
+    -ms-flex: 0 0 33.333333%;
+    -webkit-box-flex: 0;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+  .column.four {
+    -ms-flex: 0 0 25%;
+    -webkit-box-flex: 0;
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+  .column.five {
+    -ms-flex: 0 0 16.666667%;
+    -webkit-box-flex: 0;
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+  }
+}

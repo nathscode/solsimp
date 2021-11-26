@@ -1,0 +1,51 @@
+$font-family: "IBM Plex Sans",
+"Helvetica",
+"sans-serif";
+// colors
+$primary-color: #FBD414;
+$white-color: #fff;
+$dark-color: #000;
+// line-height
+$leading: ( "leading-none": 1, "leading-1": 1.25rem, "leading-2": 1.75rem, "leading-3": 1.375rem, "leading-4": 1.25rem, );
+// font sizes
+$font-sizes: ( "fs-12": 0.75rem, "fs-14": 0.875rem, "fs-15": 0.9375rem, "fs-16": 1rem, "fs-18": 1.125rem, "fs-20": 1.25rem, "fs-22": 1.375rem, "fs-24": 1.5rem, "fs-26": 1.625rem, "fs-30": 1.875rem, "fs-40": 2.5rem, "fs-45": 2.8125rem, "fs-50": 3.125rem, "fs-60": 3.75rem, );
+// font weights
+$font-weights: ( "normal": 300, "regular": 400, "medium": 500, "semi-bold": 700, "bold": 900, );
+//spacers
+$spacer--largest: 6.25rem;
+$spacer--large: 4.0625rem;
+$spacer--default: 3.125rem;
+$spacer--medium: ($spacer--default * 0.8);
+$spacer--small: ($spacer--default / 2);
+$spacer--smallest: ($spacer--small / 3);
+//breakpoints
+// Extra small screen / phone
+//** Deprecated `$screen-xs` as of v3.0.1
+$screen-xs: 479px;
+//** Deprecated `$screen-xs-min` as of v3.2.0
+$screen-xs-min: $screen-xs;
+//** Deprecated `$screen-phone` as of v3.0.1
+$screen-phone: $screen-xs-min;
+// Small screen / tablet
+//** Deprecated `$screen-sm` as of v3.0.1
+$screen-sm: 768px;
+$screen-sm-min: $screen-sm;
+//** Deprecated `$screen-tablet` as of v3.0.1
+$screen-tablet: $screen-sm-min;
+// Medium screen / desktop
+//** Deprecated `$screen-md` as of v3.0.1
+$screen-md: 992px;
+$screen-md-min: $screen-md;
+//** Deprecated `$screen-desktop` as of v3.0.1
+$screen-desktop: $screen-md-min;
+// Large screen / wide desktop
+//** Deprecated `$screen-lg` as of v3.0.1
+$screen-lg: 1200px;
+$screen-lg-min: $screen-lg;
+//** Deprecated `$screen-lg-desktop` as of v3.0.1
+$screen-lg-desktop: $screen-lg-min;
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max: ($screen-xs-min - 1);
+$screen-sm-max: ($screen-sm-min - 1);
+$screen-md-max: ($screen-md-min - 1);
+$screen-lg-max: ($screen-lg-min - 1);

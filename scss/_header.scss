@@ -1,0 +1,136 @@
+.hero {
+    width: 100%;
+    position: relative;
+    &__image {
+        margin-top: -200px;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &__navigation {
+        width: 100%;
+        z-index: 999;
+        position: relative;
+        overflow-x: hidden;
+        &__inner {
+            @include flex;
+            @include flex-row;
+            @include justify-content-center;
+            @include align-center;
+            @include flex-auto;
+        }
+        &__logo {
+            img {
+                @include svg-styles(8rem, 8rem);
+            }
+        }
+        &__list {
+            @include flex;
+            @include flex-row;
+            @include justify-content-end;
+            @include flex-wrap;
+            @include align-center;
+            @include align-self-center;
+            @include flex-auto;
+            width: 100%;
+            &__item {
+                @include flex;
+                @include align-center;
+                @include justify-content-center;
+                position: relative;
+                margin: 0 ($spacer--default / 3.5);
+                padding: ($spacer--default / 3.5) 0;
+                a {
+                    font-size: font(fs-16);
+                    padding: 0 2rem;
+                    color: lighten($white-color, 70%);
+                    &:hover {
+                        color: $primary-color;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    &__text {
+        width: 100%;
+        position: relative;
+        @include flex;
+        @include flex-column;
+        @include justify-content-center;
+        @include align-center;
+        &__content {
+            max-width: 33rem;
+            text-align: center;
+            font-family: $font-family;
+            h1 {
+                font-size: 40px;
+                font-weight: 700;
+                line-height: 50px;
+                color: $primary-color;
+                margin: $spacer--small 0;
+            }
+            p {
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 25px;
+            }
+        }
+        &__meta {
+            @include flex;
+            @include flex-row;
+            @include justify-content-center;
+            @include align-center;
+            @include flex-wrap;
+            margin: ($spacer--small * 2) 0;
+            &__list {
+                @include flex;
+                @include flex-column;
+                @include justify-content-center;
+                @include align-center;
+                text-align: center;
+                &:not(:last-child) {
+                    margin-right: 2rem;
+                }
+                p {
+                    font-size: 14px;
+                    padding-bottom: 15px;
+                }
+                h3 {
+                    font-size: 25px;
+                    font-weight: 700;
+                    line-height: 20px;
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 765px) {
+    .hero {
+        &__navigation {
+            &__list {
+                .nav-none {
+                    display: none;
+                }
+            }
+        }
+        &__text {
+            &__content {
+                h1 {
+                    font-size: 30px;
+                    line-height: 40px;
+                }
+                p {
+                    font-size: 14px;
+                }
+            }
+            &__meta {
+                &__list {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,54 @@
+.sneak {
+    width: 100%;
+    padding: $spacer--default 0;
+    @include flex;
+    @include flex-column;
+    @include justify-content-center;
+    @include align-center;
+    &__content {
+        @include flex;
+        @include flex-row;
+        @include justify-content-center;
+        @include align-center;
+        @include flex-wrap;
+        max-width: 850px;
+        &__box {
+            width: 250px;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            h3 {
+                font-size: 25px;
+                font-weight: 700;
+                line-height: 42px;
+                color: $primary-color;
+                padding-bottom: 10px;
+            }
+            p {
+                font-size: 15px;
+            }
+            img {
+                @include image;
+                height: 100%;
+                width: 100%;
+                border-radius: 10px;
+                min-height: 300px;
+                min-width: 250px;
+                z-index: 1;
+                transition: all 0.3s ease-in-out;
+                transform: translateZ(0);
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 765px) {
+    .sneak {
+        padding-bottom: 0;
+    }
+}
